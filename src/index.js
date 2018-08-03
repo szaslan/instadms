@@ -14,13 +14,11 @@ function addDMIcon() {
       dmElm.lastChild.style.backgroundPosition = '-413px -181px';
       dmElm.lastChild.href="#";
       navElm.appendChild(dmElm);
-      console.log(navElm)
-      console.log(dmElm)
+ 
     }
 }
 
 const rootElm = document.createElement('div');
-console.log(rootElm)
 rootElm.addEventListener('click', closeModal)
 
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
