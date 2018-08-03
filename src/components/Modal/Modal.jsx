@@ -6,14 +6,11 @@ class Modal extends Component {
     super(props);
   }
   render() {
-   if (this.props.modalIsOpen) {
      return (
       <div className="modal">
       <div className="modal__inner">{this.props.children}</div>
     </div>
      )
-   }
-     else return null;
   }
 }
 
