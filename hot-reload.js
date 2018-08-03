@@ -1,3 +1,22 @@
+
+function addDMIcon() {
+    console.log('asd');
+  const navElm = document.getElementById('react-root').querySelector('section > nav').lastChild.lastChild.lastChild
+    .lastChild.lastChild;
+  const dmElm = navElm.lastChild.cloneNode(true);
+  navElm.appendChild(dmElm);
+}
+
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+  if (changeInfo.status == 'complete') {
+    if (tab.url.indexOf("instagram.com") != -1) {
+      chrome.tabs.sendMessage(tabId, {text: 'report_back'});
+      injectScripts();
+    }
+
+  }
+});
+
 const filesInDirectory = dir => new Promise (resolve =>
 
     dir.createReader ().readEntries (entries =>

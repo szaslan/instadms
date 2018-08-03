@@ -9,8 +9,8 @@
   "content_scripts": [
     {
       "matches": ["*://*.instagram.com/*"],
-      "js": ["main.js"]
+      "js": ["dist/bundle.js"]
     }
   ],
-  "permissions": ["https://www.instagram.com/*"]
+  "permissions": ["webNavigation", "https://www.instagram.com/*"]
 }

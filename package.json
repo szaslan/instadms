@@ -1,10 +1,10 @@
 {
   "name": "crx-hotreload",
   "version": "1.0.1",
-  "description":
-    "Watches for file changes in your Chrome extension's directory. When a change is detected, it reloads the extension and refreshes the active tab (to re-trigger the updated scripts).",
+  "description": "Watches for file changes in your Chrome extension's directory. When a change is detected, it reloads the extension and refreshes the active tab (to re-trigger the updated scripts).",
   "main": "hot-reload.js",
   "scripts": {
+    "start": "webpack --mode development --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +16,28 @@
   "bugs": {
     "url": "https://github.com/xpl/crx-hotreload/issues"
   },
-  "homepage": "https://github.com/xpl/crx-hotreload#readme"
+  "homepage": "https://github.com/xpl/crx-hotreload#readme",
+  "babel": {
+    "presets": [
+      "env",
+      "react",
+      "stage-2"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "react-hot-loader": "^4.3.4",
+    "webpack": "^4.16.4",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
 }
